@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# VS Code
+.vscode/
+
+# C++ — скомпилированное
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# C++ — сборка
+build/
+cmake-build-*/
+out/
+bin/
+obj/
+Debug/
+Release/
+
+# CMake / Make
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+*.d
+*.gch
+
+# Отладка / профилирование
+*.pdb
+*.ilk
+*.idb
+*.gcda
+*.gcno
+*.gcov
+core
+vgcore.*
+
+# Логи и временное
+*.log
+*.tmp
