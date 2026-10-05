@@ -1,6 +1,7 @@
 #include <iostream>
 
 void my_sort(int *arr, const int size);
+void print_array(const int *arr, const int size, const char *title);
 
 int main() {
     setlocale(LC_ALL, "Russian"); //чтобы русский текст в консоли работал
@@ -23,21 +24,13 @@ int main() {
     }
 
     //вывод исходного массива
-    std::cout << "\nИсходный массив: ";
-    for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << "\n";
+    print_array(arr, size, "\nИсходный массив: ");
 
     //сортировка
     my_sort(arr, size);
 
     //вывод отсортированного массива
-    std::cout << "Отсортированный массив: ";
-    for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
-    }
-    std::cout << "\n";
+    print_array(arr, size, "Отсортированный массив: ");
 
     delete[] arr;
     return 0;
@@ -54,4 +47,12 @@ void my_sort(int *arr, const int size) {
             }
         }
     }
+}
+
+void print_array(const int *arr, const int size, const char *title) {
+    std::cout << title;
+    for (int i = 0; i < size; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << "\n";
 }
